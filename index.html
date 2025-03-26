@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   <link rel="stylesheet" href="style.css">
+   <title>REsponsive_Cards</title>
+</head>
+<body>
+   
+    <div class="cards"></div>
+   
+<script>
+   const users= [
+
+    {name:"xyz", age:21, job:"Frontend Developer"},
+    {name:"iop", age:21, job:"Backend  Developer"},
+    {name:"abc", age:21, job:"Frontend Developer"},
+    {name:"pqr", age:21, job:"Frontend Developer"},
+    {name:"ghf", age:21, job:"Frontend Developer"},
+    {name:"jkl", age:21, job:"Backend   Developer"},
+    {name:"tyu", age:21, job:"Backend   Developer"},
+    {name:"ytr", age:21, job:"Frontend Developer"},
+    {name:"klj", age:21, job:"Backend   Developer"},
+];
+
+     const cards = document.querySelector(".cards");
+
+     function createUser(user) {
+        return `
+
+        <div class="card">
+            <p class="name">${user.name}</p>
+            <p class="age">${user.age}</p>
+            <p class="job">${user.job}</p>
+            </div> `;
+        }
+
+        for(let i=0; i<users.length; i++){
+            cards.innerHTML += createUser(users[i]);
+         }
+   </script>
+</body>
+</html>
